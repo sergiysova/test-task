@@ -1,0 +1,17 @@
+[33mcommit b337d0c8242c9a104a91d9fac4f0e375cdec197b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: = <serj.sova@gmail.com>
+Date:   Wed Oct 14 17:33:49 2020 +0300
+
+    final
+
+[33mcommit 5af796357230e72059b58463a441013e3bf5c703[m
+Author: = <serj.sova@gmail.com>
+Date:   Wed Oct 14 15:32:34 2020 +0300
+
+    separate slices
+
+[33mcommit a394f0acff2154d681b2c69a98a9745a1dd00b9d[m
+Author: = <serj.sova@gmail.com>
+Date:   Wed Sep 30 14:10:32 2020 +0300
+
+    Initialize project using Create React App
