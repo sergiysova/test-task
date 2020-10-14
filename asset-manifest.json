@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/test-task/build/static/css/main.573a77e3.chunk.css",
+    "main.js": "/test-task/build/static/js/main.604847a9.chunk.js",
+    "main.js.map": "/test-task/build/static/js/main.604847a9.chunk.js.map",
+    "runtime-main.js": "/test-task/build/static/js/runtime-main.18890085.js",
+    "runtime-main.js.map": "/test-task/build/static/js/runtime-main.18890085.js.map",
+    "static/js/2.8fc12648.chunk.js": "/test-task/build/static/js/2.8fc12648.chunk.js",
+    "static/js/2.8fc12648.chunk.js.map": "/test-task/build/static/js/2.8fc12648.chunk.js.map",
+    "index.html": "/test-task/build/index.html",
+    "precache-manifest.8e4fa67e146cf9debb427e75cbe4077d.js": "/test-task/build/precache-manifest.8e4fa67e146cf9debb427e75cbe4077d.js",
+    "service-worker.js": "/test-task/build/service-worker.js",
+    "static/css/main.573a77e3.chunk.css.map": "/test-task/build/static/css/main.573a77e3.chunk.css.map",
+    "static/js/2.8fc12648.chunk.js.LICENSE.txt": "/test-task/build/static/js/2.8fc12648.chunk.js.LICENSE.txt",
+    "static/media/index.sass": "/test-task/build/static/media/menu icon.6f6bef28.svg",
+    "static/media/logo.svg": "/test-task/build/static/media/logo.146e2926.svg",
+    "static/media/man-laptop-v1.svg": "/test-task/build/static/media/man-laptop-v1.3cdf7897.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18890085.js",
+    "static/js/2.8fc12648.chunk.js",
+    "static/css/main.573a77e3.chunk.css",
+    "static/js/main.604847a9.chunk.js"
+  ]
+}
