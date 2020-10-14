@@ -1,0 +1,147 @@
+@import './vars'
+@import '~bootstrap/scss/bootstrap.scss'
+body
+  font-family: $default-font
+  font-size: 16px
+  line-height: 1.5
+  color: $body-text-color
+
+h1, h2
+  font-weight: 400
+  font-size: 50px
+  line-height: 54px
+  color: $heading-text-color
+  margin-bottom: 2rem
+
+h3
+  font-weight: 400
+  font-size: 24px
+  line-height: 29px
+  color: $heading-text-color
+  margin-bottom: 2rem
+
+p
+  margin-bottom: 2rem
+
+label
+  cursor: pointer
+
+img 
+  display: block
+  max-width: 100%
+
+.btn 
+  color: $white
+  background-color: $primary-color
+  height: 38px
+  width: 210px
+  border: none
+  text-decoration: none
+  display: block
+  border-radius: $border-radius
+
+
+  &:hover
+    background-color: $btn-hover-color
+    color: $white
+
+  &.secondary
+    text-align: left
+    padding-left: 0
+    background: none
+    font-weight: 700
+    color: $primary-color
+
+    &:hover
+      color: $btn-hover-color
+  &.center
+    margin: auto
+
+.tooltip-container
+  position: relative
+  cursor: pointer
+  
+
+  &::after
+    content: attr(data-tooltip)
+    display: block
+    position: absolute
+    background: $dark-grey
+    padding: 10px
+    color: $white
+    border-radius: $border-radius
+    font-size: 14px
+    line-height: 1
+    white-space: break-spaces
+    max-width: 300px  
+
+.container-fluid
+  padding: 130px 15px
+
+.header
+  background: $white
+  .navbar
+    height: 60px  
+    padding: 0
+    .navbar-nav 
+      .nav-link
+        padding: 0 0 0 30px
+        color: $heading-text-color
+        font-size: 14px
+
+.top-section
+  padding: 110px 0
+  background: url("../img/banner-photo.jpg") center no-repeat
+  background-size: cover
+  color: $white
+
+  h1
+    text-transform: uppercase
+    color: #fff
+    margin-bottom: 2rem
+
+.developer-section
+  padding: 130px 0
+
+  img
+    max-height: 100%
+    padding-top: 4px
+
+
+.users-section
+  background: $bg-alternate
+
+.users-list
+  margin-top: 4rem
+.user-card
+  margin: auto
+  width: 200px
+  margin-bottom: 2rem
+  .user
+    &-image
+      width: 70px
+      height: 70px
+      border: 2px solid $white
+      border-radius: 50%
+      margin: 0 auto 16px
+    &-name
+      min-height: 33px
+      margin-bottom: 0
+    &-position, &-email, &-phone
+      margin-bottom: 4px
+
+.form
+  color: #212529
+  label
+    font-weight: 500
+  .custom-radio
+    margin-bottom: 4px
+
+  .invalid-radios .invalid-feedback
+    display: block
+
+  .was-validated .form-control:invalid, .form-control.is-invalid
+    background-image: none
+  
+
+@import './media'
