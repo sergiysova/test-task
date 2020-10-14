@@ -2,19 +2,16 @@ import React, { useState, useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import { useForm } from 'react-hook-form';
 
-import {fetchPositions} from '../../features/positions/positionsSlice';
-import {fetchToken, resetToken} from '../../features/token/tokenSlice';
-import {addNewUser, resetUSers} from '../../features/users/usersSlice';
+import {addNewUser, fetchToken, fetchPositions, resetState} from '../../features/users/usersSlice';
 import Modal from './Modal';
 
 const RegisterForm = () =>{
 
   const dispatch = useDispatch();
-  const positions = useSelector(state => state.positions);
-  const token = useSelector(state => state.token);
-  const formStatus = useSelector(state => state.users.listUpdating);
+  const positions = useSelector(state => state.app.positions);
+  const token = useSelector(state => state.app.token);
+  const formStatus = useSelector(state => state.app.newUser);
   const [fileName, setFileName] = useState('Choose file');
-  const [popupShown, setPopupShown] = useState(false)
 
   const { register, handleSubmit, errors } = useForm({
     mode: 'onChange'
@@ -39,14 +36,7 @@ const RegisterForm = () =>{
     
   };
 
-  useEffect(  () => {
-    if(formStatus.status === 'succeded'){
-      dispatch(resetToken());
-      dispatch(resetUSers());
-      setPopupShown(true)
-    }
-    
-  },[dispatch, formStatus.status ])
+
 
   useEffect(  () => {
     if(token.status === 'idle'){
@@ -176,7 +166,7 @@ const RegisterForm = () =>{
         </div> 
         <button type='submit' className='btn'>Sign Up Now</button>
       </form>
-      <Modal onModalClosed={() => setPopupShown(false)} shown={popupShown} successful={formStatus.result.sucess}/>
+      <Modal onModalClosed={() => dispatch(resetState())} shown={formStatus.popupOpened} successful={formStatus.result.sucess}/>
     </React.Fragment>
     
   )

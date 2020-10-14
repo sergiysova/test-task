@@ -9,7 +9,7 @@ const UsersList = ({users = []}) => {
   const sortedUsers = users.slice().sort((a, b) => b.registration_timestamp - a.registration_timestamp)
   const content = sortedUsers.map(user => {
     return(
-      <div key={user.id} className='col-lg-4'>
+      <div key={user.id} className='col-md-4'>
         <UsersCard user={user} />
       </div>
     )
@@ -23,10 +23,7 @@ const UsersList = ({users = []}) => {
 }
 
 const UsersListContainer = ({usersPerPage = 6}) => {
-  const users =  useSelector( state => state.users.data );
-  const status = useSelector(state => state.users.status);
-  const nextPageUrl = useSelector(state => state.users.nextPageUrl);
-  const error = useSelector(state => state.users.error);
+  const {data: users, status, nextPageUrl, error} =  useSelector( state => state.app.users );
   const dispatch = useDispatch();
   
   useEffect(() => {

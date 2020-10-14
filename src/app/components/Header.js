@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-
 import logo from '../../assets/img/logo.svg';
 const Header = () => {
 
@@ -14,7 +13,7 @@ const onNavButtonClicked = () => {
     <header className='fixed-top header'>
       <div className='container'>
         <nav className="navbar navbar-expand-lg navbar-light bg-none ">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <img src={logo} className='logo' alt='logo' />
           </a>
           <div className={`collapse navbar-collapse ${navOpen ? 'show' : '' }`} id="navbarText">

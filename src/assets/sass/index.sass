@@ -5,6 +5,7 @@ body
   font-size: 16px
   line-height: 1.5
   color: $body-text-color
+  margin-top: 60px
 
 h1, h2
   font-weight: 400
@@ -39,8 +40,6 @@ img
   text-decoration: none
   display: block
   border-radius: $border-radius
-
-
   &:hover
     background-color: $btn-hover-color
     color: $white
@@ -56,15 +55,18 @@ img
       color: $btn-hover-color
   &.center
     margin: auto
+  &.right
+    margin-left: auto
+  &.short
+    width: auto
+
 
 .tooltip-container
   position: relative
   cursor: pointer
-  
-
   &::after
     content: attr(data-tooltip)
-    display: block
+    display: none
     position: absolute
     background: $dark-grey
     padding: 10px
@@ -73,10 +75,16 @@ img
     font-size: 14px
     line-height: 1
     white-space: break-spaces
-    max-width: 300px  
+    max-width: 300px 
+    word-wrap: break-word
+    left: auto
+    z-index: 10
+  &:hover
+    &::after
+      display: block
 
 .container-fluid
-  padding: 130px 15px
+  padding: 130px 0
 
 .header
   background: $white
@@ -91,7 +99,7 @@ img
 
 .top-section
   padding: 110px 0
-  background: url("../img/banner-photo.jpg") center no-repeat
+  background: url("../img/banner-photo.jpg") left center no-repeat
   background-size: cover
   color: $white
 
@@ -130,6 +138,12 @@ img
     &-position, &-email, &-phone
       margin-bottom: 4px
 
+.footer-section
+  padding: 15px
+  border-top: 1px solid #ececec
+  p
+    margin-bottom: 0
+
 .form
   color: #212529
   label
@@ -142,6 +156,15 @@ img
 
   .was-validated .form-control:invalid, .form-control.is-invalid
     background-image: none
+
+  .btn
+    margin-top: 2rem
+
+.modal.shown
+  display: block
+  background-color: rgba(0,0,0, .5)
+  h3, p
+    margin-bottom: 0
   
 
 @import './media'

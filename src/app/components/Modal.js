@@ -1,21 +1,24 @@
 import React from 'react';
 
-const Modal = ({onModalClosed}) => {
-
+const Modal = ({onModalClosed, shown}) => {
+  const classNmaes = `modal ${shown ? 'shown' : ''}`
 
   return (
-    <div className="modal " tabIndex="-1" role="dialog">
-    <div className="modal-dialog" role="document">
+    <div className={classNmaes} tabIndex="-1" role="dialog">
+    <div className="modal-dialog modal-dialog-centered" role="document">
       <div className="modal-content">
         <div className="modal-header">
+        <h3>Congratulations</h3>
           <button type="button" className="close"  onClick={onModalClosed}>
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div className="modal-body">
-          <h3>Congratulations</h3>
           <p>You have successfully passed the registration</p>
-          <button type='button' onClick={onModalClosed}>Great</button>
+        </div>
+        <div className="modal-footer">
+
+          <button type='button' className='btn right short' onClick={onModalClosed}>Great</button>
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ const FormSection = () => {
     <div id='form-section' className='form-section container-fluid'>
       <div className='container'>
         <div className='row justify-content-center'>
-          <div className='col-lg-6'>
+          <div className='col-lg-6 col-md-8'>
             <h2 className='text-center'>
               Register to get a work
             </h2>

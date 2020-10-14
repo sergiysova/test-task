@@ -10,11 +10,11 @@ const DeveloperSection = () => {
         <h2 className='text-center'>
           Let's get acquainted
         </h2>
-        <div className='row align-items-center'>
-          <div className='col-lg-5'>
+        <div className='row '>
+          <div className='col-lg-5 col-md-4'>
             <img src={image} alt='man with laptop' />
           </div>
-          <div className='col-lg-7'>
+          <div className='col-lg-7 col-md-8'>
             <h3>I am cool frontend developer</h3>
             <p>
               We will evaluate how clean your approach to writing CSS and Javascript code is. You can use any CSS and Javascript 3rd party libraries without any restriction.

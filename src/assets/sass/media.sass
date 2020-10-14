@@ -2,7 +2,10 @@
   .container, .container-sm, .container-md, .container-lg, .container-xl
     max-width: 1170px
 
-@media screen and (max-width: 992px)
+@media screen and (max-width: 991px)
+  h1, h2
+    font-size: 40px
+    line-height: 44px
   .header
     .navbar-toggler
       padding: 0
@@ -18,8 +21,8 @@
         background: rgba(0,0,0,0.5)
         z-index: 1
         transition-delay: 0.3s
-    .navbar
-      height: 40px
+      .navbar-toggler-icon
+        background: url('../img/menu icon.svg') center no-repeat
     .navbar-collapse
       position: fixed
       display: flex
@@ -50,3 +53,44 @@
         padding: 10px 0
       .nav-link
         font-size: 16px
+
+  .top-section
+    padding: 60px 0 
+    h1
+      padding-right: 20px
+  .tooltip-container::after
+    max-width: 220px
+
+  .form .btn
+    margin-left: auto
+    margin-right: auto
+
+@media screen and (max-width: 586px)
+  h1
+    font-size: 30px
+    line-height: 34px
+
+  h1, h2, .subtitle
+    text-align: center
+  .btn
+    margin-right: auto
+    margin-left: auto
+    &.secondary
+      text-align: center
+
+  .remove-mobile
+    display: none
+
+  body
+    margin-top: 40px
+  .header .navbar
+    height: 40px
+  .top-section
+    h1
+      padding-right: 0
+      
+  .developer-section img
+    padding: 0 0 3rem
+
+  .tooltip-container::after
+    max-width: 200px
